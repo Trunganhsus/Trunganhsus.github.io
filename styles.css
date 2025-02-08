@@ -1,0 +1,139 @@
+/* Cài đặt chung */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Phần "My First Website" */
+#intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 200px; /* Đẩy phần dưới ra xa */
+    position: relative;
+}
+
+/* Spotlight làm nổi bật dòng chữ */
+.spotlight {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 255, 100, 0.8) 0%, rgba(0, 0, 0, 0.8) 80%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hiệu ứng chữ */
+h1 {
+    font-size: 70px;
+    color: gold;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+/* Hiệu ứng hiện dần */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Mũi tên kéo xuống */
+.arrow {
+    position: absolute;
+    bottom: 20px;
+    font-size: 30px;
+    color: gold;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(10px); }
+}
+
+/* Phần Contact */
+#contact-section {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: gold;
+    font-size: 20px;
+    padding-top: 150px; /* Đẩy Contact xuống xa hơn */
+}
+
+/* Nút "Click on this" */
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#nextPageButton {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: gold;
+    background-color: black;
+    border: 2px solid gold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#nextPageButton:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* Ẩn khu vực 3 nút ban đầu */
+.hidden {
+    display: none;
+}
+
+/* Khi bấm vào, chỉ hiển thị 3 nút */
+.full-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nút menu chuyên nghiệp */
+.menu-btn {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid white;
+    background-color: black;
+    color: gold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu-btn:hover {
+    background-color: gold;
+    color: black;
+    border-color: gold;
+}
