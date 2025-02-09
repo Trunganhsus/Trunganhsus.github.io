@@ -51,3 +51,24 @@ function sendEmail(subject) {
     .then(data => alert("Email sent successfully! ✅")) 
     .catch(error => alert("Error sending email ❌"));
 }
+submitButton.addEventListener("click", () => {
+    const enteredPassword = passwordInput.value;
+  
+    // Kiểm tra mật khẩu
+    if (enteredPassword === correctPassword) {
+      passwordScreen.style.display = "none"; // Ẩn màn hình nhập mật khẩu
+      mainContent.style.display = "block"; // Hiển thị nội dung chính
+    } else {
+      errorMessage.style.display = "block"; // Hiện thông báo lỗi
+      passwordInput.value = ""; // Xóa nội dung ô nhập
+  
+      // Thêm hiệu ứng rung
+      passwordInput.classList.add("shake");
+      
+      // Xóa hiệu ứng rung sau 0.3s để có thể lặp lại nếu nhập sai nhiều lần
+      setTimeout(() => {
+        passwordInput.classList.remove("shake");
+      }, 300);
+    }
+  });
+  
